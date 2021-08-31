@@ -22,7 +22,7 @@ end
 
 group node['dela']['group'] do
   action :modify
-  gid node['dela']['gid']      
+  #gid node['dela']['gid']      
   members ["#{node['dela']['user']}"]
   append true
   not_if { node['install']['external_users'].casecmp("true") == 0 }
@@ -30,7 +30,7 @@ end
 
 group node['hops']['group'] do
   action :create
-  gid node['hops']['group_id']  
+  #gid node['hops']['group_id']  
   not_if "getent group #{node['hops']['group']}"
   not_if { node['install']['external_users'].casecmp("true") == 0 }
 end
