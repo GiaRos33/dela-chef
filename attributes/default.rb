@@ -6,6 +6,7 @@ default['dela']['service']               = "dela"
 default['dela']['group']                 = node['install']['user'].empty? ? "dela" : node['install']['user']
 default['dela']['user']                  = node['install']['user'].empty? ? "dela" : node['install']['user']
 default['dela']['uid']                   = "10220"
+default['dela']['gid']                   = "10221"
 
 default['dela']['public_ips']            = ['10.0.2.15']
 default['dela']['private_ips']           = ['10.0.2.15']
