@@ -15,6 +15,7 @@ user node['dela']['user'] do
   shell "/bin/bash"
   manage_home true
   action :create
+  uid node['dela']['uid']                           
   not_if "getent passwd #{node['dela']['user']}"
   not_if { node['install']['external_users'].casecmp("true") == 0 }
 end
